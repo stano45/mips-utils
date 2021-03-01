@@ -23,6 +23,15 @@ registers = np.array([
     't8', 't9', 'k0', 'k1', 'gp', 'sp', 'fp', 'ra'
 ])
 
+def user_input_convert(base : int, msg="Input: "):
+    while True:
+        inp = input(msg)
+        try:
+            inp = int(inp, base)
+        except ValueError:
+            print("Input {} not in base {}.".format(inp, base))
+        return inp
+
 def find_reg(name: str):
     if name == "" or name == " " or name == "0":
         return 0

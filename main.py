@@ -2,7 +2,7 @@ from mips_assembler import *
 
 def main():
     while True:
-        inp = input("\nValue to command? (y/n; q to quit): ")
+        inp = input("\nValue to command (y); Command to value (n); Quit (q): ")
         if inp == "q":
             exit(0)
         
